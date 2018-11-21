@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <body>
+        <!-- <form action="">输入框 -->
+            <p>
+                用户姓名
+                <input type="text" name="username" placeholder="请输入6位" maxlength="6" autocomplete="off">
+            </p>
+            <p>
+                用户密码
+                <input type="password" name="userpassword">
+            </p>
+            <p>
+                用户性别:
+                <input type="radio" name="gender" value="male" checked id="male"><label for="male">男</label>
+                <input type="radio" name="gender" value="female" id="woman"><label for="woman">女</label>
+            </p>
+            <p>
+                用户爱好:
+                <input type="checkbox" name="hobby" value="boll">玩球
+                <input type="checkbox" name="hobby" value="baskboll">篮球
+                <input type="checkbox" name="hobby" value="smoke">抽烟
+                <input type="checkbox" name="hobby" value="drink">喝酒
+                <input type="checkbox" name="hobby" value="hothair">烫头
+            </p>
+            <input type="hidden" name="uid" value="007">
+            <p>
+                选择文件
+                <input type="file" name="file_one">
+            </p>
+            <p>
+                选择城市 :
+                <select name="address">
+                    <option value="beijing">北京</option>
+                    <option value="shanghai" selected>上海</option>
+                    <option value="guangzhou">广州</option>
+                    <option value="shenzhen">深圳</option>
+                </select>
+            </p>
+            <p>
+                用户介绍:
+                <textarea name="uinfo" cols="20" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="提交"> 
+                <input type="reset">        
+            </p>
+        </form> 
+    </body>
+</html>

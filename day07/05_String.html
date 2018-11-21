@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str1 = "100";
+			var str2 = "abd";
+			var str3 = "ABC";
+			var code1 = str1.charCodeAt(0);
+			var code2 = str2.charCodeAt();
+			var code3 = str3.charCodeAt(0);
+			console.log(code1,code2,code3);
+			
+			//定义中文字符串
+			var str4 = "张三丰";
+			console.log(str4.charCodeAt(0));
+			//中文Unicode码转16进制
+			var code4 = str4.charCodeAt(0);
+			//转换16进制的字符串表示
+			var zhCode = code4.toString(16);
+			console.log(zhCode);
+			//十六进制字符串转中文
+			var str5 = "\u5f20";
+			console.log(str5);
+			
+			//中文范围
+			var s1 = "\u4e00";
+			var s2 = "\u9fa5";
+			console.log(s1,s2)
+			
+			var b1 = true;
+			console.log(typeof s1,typeof b1)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+// 			var a = prompt("请输入");
+// 			var b = Number(a) % 400 == 0; 
+// 			var c = (a % 4 == 0) && (a % 100 !=0);
+// 			var d = b || c;
+// 			console.log(d);
+			
+			var input = prompt("请输入一个字符:");
+			var isNum = input >= 0 && input <=9
+			console.log(input+"是数字吗:"+isNum);
+			var isChn = input >= "\u4e00" && input <= "\u9fa5";
+			console.log(input+"是中文吗:"+isChn);
+			var isUpper = input >= 'A' && input <= 'Z';
+			var isLower = input >= 'a' && input <= 'z';
+			var isEng = isUpper || isLower;
+			console.log(input+"是英文吗:"+isEng)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//生成验证码(接收 参数, 表示验证码长度)
+			function createCode(len){
+				//数据源
+				var arr = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','A','B','C','G','Z'];
+				//保存生成的验证码
+				var show = "";
+				//根据指定的长度, 随机取元素
+				for(var i=0;i<len;i++){//i表示循环次数, 由验证码长度决定
+					//随机下标
+					/*
+						1. Math.random() - [0,1)
+						2. Math.random() * 10 --[0,10)
+					*/
+					var index = parseInt(Math.random() * arr.length);
+					//拼接验证码
+					show += arr[index];
+				}
+				//返回验证码
+				return show;
+				
+			}
+			
+			
+			
+			function validate(){
+				//1. 生成验证码
+				var code = createCode(4);
+				//2. 提示用户输入
+				var input = prompt("请输入验证码:"+code)
+				//3. 验证
+				if(input.toUpperCase() == code.toUpperCase()){
+					alert("输入正确");
+				}else{
+					alert("输入有误");
+				}
+				
+			}
+		</script>	
+		<button onclick="validate()">获取验证码</button>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

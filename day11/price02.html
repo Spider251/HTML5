@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 练习 :
+		1. 创建 div 按钮 输入框
+		2. 按钮验证用户输入的用户名是否在6-18位之间
+		3. 满足要求, 在div中以绿色文本提供用户"用户名合法"
+		不满足要求, 以红色文本提示 -->
+		用户名:
+		<input type="text" id="myText"/>
+		<button onclick="check()">检验</button>
+		<div></div>
+		<script>
+			function initWithTagName(tagName){
+				//函数接收字符串参数, 表示标签名
+				//获取元素节点
+				var elem = document.getElementsByTagName(tagName)[0];
+				return elem;
+			}
+			//获取元素节点
+			function check(){
+				var input = initWithTagName('input');
+				var div = initWithTagName('div');
+				//验证字符串长度
+				var uname = input.value;
+				if(uname.length >= 6 && uname.length <= 18){
+					//显示提示信息
+					div.innerHTML = "<b>用户名合法</b>";
+					div.style.color = 'yellowgreen'
+					
+				}else{
+					div.style.color = "red"
+					div.textContent = "<b>用户名不合法</b>"
+				}
+			}
+		</script>
+	</body>
+</html>

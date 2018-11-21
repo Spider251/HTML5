@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1. 根据正则模式或指定字符串匹配内容
+			var s1 = "你好, 小白, 你好, 小红";
+			var arr = s1.match("你好");
+			var arr2 = s1.match(/你好/g);
+			console.log(arr,arr2)
+			
+			//2.  查找并替换指定内容
+			s1.replace(/你好/g,"再见");
+			
+			//练习
+			var s2 = 'Microsoft is a big company,microsoft is a big MicROsoft is a big company'
+			var newStr = s2.replace(/microsoft/ig,"微软");
+			var res = s2.match(/microsoft/ig);
+			console.log(res,"共替换了"+res.lenght+"次")
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="start()">开启定时器</button>
+		<button onclick="stop()">停止定时器</button>
+		<button onclick="closePage()">关闭网页</button>
+		<script>
+			function start(){
+				//开启超时调用
+				timerID = setTimeout(function(){
+					alert("超时调用");
+				},3000)
+			}
+			function stop(){
+				//关闭定时器
+				clearTimeout(timerID);
+				console.log(timerID);
+			}
+			function closePage(){
+				var res = confirm("是否要关闭页面");
+				if(res){
+					setTimeout(function(){
+						window.close()
+					},3000);
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>

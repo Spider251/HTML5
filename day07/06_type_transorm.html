@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1. 字符串的拼接
+			var r1 = "张三" + "李四"; // "张三李四"
+			var r2 = "张三" + 100;
+			var r3 = "张三" + true;
+			console.log(r1,typeof r1);
+			console.log(r2,typeof r2);
+			console.log(r3,typeof r3);
+			var r4 = "张三" + undefined;
+			var r5 = "张三" + null;
+			console.log(r4,typeof r4);
+			console.log(r4,typeof r5);
+			
+			//2. boolean + number
+			var res1 = 100 + true;
+			var res2 = 200 + false;
+			console.log(res1)
+			console.log(res2)
+			
+			//3. number + undefined/null
+			var res3 = 100 + undefined;
+			var res4 = 100 + null;
+			console.log(res3,res4)
+			
+			//4. boolean + undefined/null
+			var res5 = true + undefined;
+			var res6 = false + null;
+			//-------强制类型转换---------
+			var a = 100;
+			var b = true;
+			var str1 = a.toString();
+			var str2 = b.toString();
+			console.log(str1,typeof str1);
+			console.log(str2,typeof str2);
+			//Number
+			console.log(Number(str1),Number(b),Number("张3"));
+			//parseInt parseFloat
+			console.log(parseInt("100a"),parseInt("a100"))
+			console.log(parseInt("18.5asdasd"),parseInt("18.5asd"))
+			console.log(parseInt(18.5),parseInt(true))
+			//定义变量接收用户输入的结果
+			var age = prompt("请输入年龄");
+			console.log(age,typeof age)
+			
+			
+		</script>
+	</body>
+</html>

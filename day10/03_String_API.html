@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//获取字符或字符编码
+			var s1 = 'hello';
+			var s2 = 'Hello 小明';
+			var r1 = s1.charAt(0);
+			var r2 = s1.charCodeAt();
+			console.log(r1,r2)
+			var res1 = s2.charAt(6);
+			var res2 = s2.charCodeAt(6);
+			//中文在计算机中以十六进制存储
+			res2 = res2.toString(16); //5c0f
+			res2 = '\u5c0f';
+			console.log(res1,res2)
+			
+			
+			// -------检索字符串-----------
+			var s3 = "hello world";
+			var a = s3.indexOf('l');
+			var a1 = s3.indexOf('l',5);
+			console.log(a,a1)
+			var b = s3.lastIndexOf('l');
+			var b1 = s3.lastIndexOf('l',5);
+			console.log(b,b1)
+			
+			//截取字符串
+			var s4 = '2018-11-11'
+			var result = s4.substring(0,4);
+			console.log(s4,result)
+			
+			//
+			var alt = 'zhangsan100@163.com';
+			var alt1 = alt.split('@')[0]
+			var alt2 = alt.split('@')[1]
+			console.log(alt,alt1,alt2)
+			
+			var id = '10032219001206478X'
+			var id1 = id.substring(6,14)
+			console.log(id1)
+			
+		</script>
+	</body>
+</html>

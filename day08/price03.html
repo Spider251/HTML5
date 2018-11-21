@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+// 			do{
+// 				var i = prompt("输入exit退出")
+// 				console.log(i)
+// 			}while(i != 'exit')
+// 			
+			var year = Number(prompt("year"))
+			var month = Number(prompt("month"))
+			var day = Number(prompt("day"))
+			
+			var sum = 0;
+			//判断闰年
+			var isRun = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+			//天数累加
+			var i = 1;
+			while(i < month){ //i 取 1~ month-1
+				switch(i){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+						sum += 31;
+						break;
+					case 4:
+					case 6:
+					case 9:
+					case 11:
+						sum += 30;
+						break;
+					case 2:
+						sum += 28;
+						if(isRun)
+						sum += 1;
+						break;
+				}
+				i ++;
+			}
+			sum += day;
+			console.log(year + '年' + month + '月' + day + '日' + '共' + sum + '日')
+		</script>
+	</body>
+</html>

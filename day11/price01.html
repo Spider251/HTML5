@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="https://www.bilibili.com">B站</a>
+		<button onclick="get()">点击</button>
+		<script>
+			function get(){
+				//1. 获取元素节点
+				var a = document.getElementsByTagName('a')[0];
+				a.className = "a";
+				//2. 新建窗口打开文件
+				a.target = "_blank";
+				//3.修改链接地址
+				a.href = "https://www.baidu.com";
+			}
+		</script>
+	</body>
+</html>

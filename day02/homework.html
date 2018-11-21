@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <body>
+		<h1>增加管理员</h1>
+		<from action="" method="get">
+			<table border="0px">
+				<tr>
+					<td>姓名:</td>
+					<td><input type="text" name="uname" maxlength="10"></td>
+					<td>十个字符以内</td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td><input type="text" name="upwd" maxlength="10"></td>
+					<td>十个字符以内</td>
+				</tr>
+				<tr>
+					<td>性别:</td>
+					<td colspan="2">
+						<input type="radio" name="sex" id="male"><label for="male">男</label>
+						<input type="radio" name="sex" id="female"><label for="female">女</label>
+					</td>
+				</tr>
+				<tr>
+					<td>角色:</td>
+					<td>
+						<input type="checkbox" name="admit" value="superadmit">超级管理员<br>
+						<input type="checkbox" name="admit" value="billadmit">账单管理员
+					<td>至少选择一个角色</td>
+				</tr>
+				<tr>
+					<td>头像:</td>
+					<td>
+						<input type="file" name="uimg">
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="button" value="保存" name="save">
+						<input type="reset" value="重填" name="reset"/>
+					</td colspan="2">
+				</tr>
+			</table>
+		</from>
+		<img src="../timg.jpg" width="100px" title="" alt="加载失败.....">
+		<a href="https://www.baidu.com">百度一下,你就晓得</a>
+		<a href="javascript:void(0)">点击</a>
+		<a href="https://www.baidu.com">
+			<img src="../timg.jpg" width="100px">
+		</a>
+    </body>
+</html>

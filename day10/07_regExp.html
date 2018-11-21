@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1. 创建正则表达式
+			var reg1 = /microsoft/ig;
+			var reg2 = /\d{6}/g;
+			var reg3 = new RegExp("\\d{6}","g");
+			
+			//定义字符串
+			var s1 = 'hello123456798';
+			var r1 = reg2.test(s1);
+			console.log(r1,reg2.lastIndex)
+			//访问属性,lastIndex 指定下次
+			var r2 = reg2.test(s1);
+			console.log(r2,reg2.lastIndex)
+		</script>
+	</body>
+</html>

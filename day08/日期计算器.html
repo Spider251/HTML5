@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var year = Number(prompt("请输入年:"))
+			var month = Number(prompt("请输入月:"))
+			var day = Number(prompt("请输入日"))
+			//总天数
+			var sum = 0;
+			//判断闰年
+			var isRun = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+			//天数累加
+			switch(month-1){
+				case '11':
+					sum += 30
+				case '10':
+					sum += 31
+				case '9':
+					sum += 30
+				case '8':
+					sum += 31
+				case '7':
+					sum += 31
+				case '6':
+					sum += 30
+				case '5':
+					sum += 31
+				case '4':
+					sum += 30
+				case '3':
+					sum += 31
+				case '2':
+					sum += 28
+					if(isRun){
+						sum += 1
+					}
+				case '1':
+					sum += 31
+					
+			}
+			// sum += day;
+			
+			console.log("一年到现在一共"+sum+"天")
+		</script>
+	</body>
+</html>
