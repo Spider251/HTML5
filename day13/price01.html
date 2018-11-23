@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.11.3.js"></script>
+		<script>
+			function show()
+			{//按钮点击获取元素
+				var text = $("[type=text]").val();
+				$('div').html("<h1>"+text+"</h1>");
+				$("div").attr("id","box");
+				console.log($("div").attr("id"));
+				$("div").removeAttr("class");
+				
+			};
+		</script>
+	</head>
+	<body>
+		<!-- 	1. 创建文本框, 设置id属性
+		2. 创建按钮, 显示文本不限
+		3. 创建div, 实现点击按钮时, 将文本框的输入内容以一级标题的形式显示在div中 -->
+		<input type="text" name=""/>
+		<input type="button" value="hah" onclick="show()"/>
+		<div class="c1"></div>
+	</body>
+</html>

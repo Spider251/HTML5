@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.11.3.js"></script>
+		<script>
+			window.onload = function()
+			{
+				//1. :first : last
+				$("p:first").css("color","red");
+				$("p:last").css("color","green");
+				//2. 奇偶行(行号从1开始)
+				$("p:even").css("background","orange")
+				$("p:odd").css("background","pink")
+				//3.  下标匹配
+				$("p:eq(2)").css("background","red");
+				$("p:lt(2)").css("background","white");
+				$("p:gt(2)").css("font-size","24px");
+				//4. 否定筛选
+				$(":not(p,body,html)").css("border","1px solid blue")
+				
+				
+			};
+		</script>
+	</head>
+	<body>
+		<p>星期壹</p>
+		<p>星期贰</p>
+		<p>星期叁</p>
+		<p>星期肆</p>
+		<p>星期伍</p>
+		<p>星期陆</p>
+		<p>星期柒</p>
+		<div>
+			<p>星期壹</p>
+			<p>星期贰</p>
+			<p>星期叁</p>
+			<p>星期肆</p>
+			<p>星期伍</p>
+			<p>星期陆</p>
+			<p>星期柒</p>
+		</div>
+	</body>
+</html>

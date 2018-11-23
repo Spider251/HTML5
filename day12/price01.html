@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">标签创建</div>
+		<!-- 练习 : price01.html
+				1. 创建div元素节点
+				2. 设置div的id属性为box
+				3. 通过innerHTML/innerText设置div内容
+					"动态创建的div"
+				4. 控制台输出div元素节点 -->
+		<script>
+			var div2 = document.createElement("div");
+			div2.innerHTML = "动态创建的div";
+			div2.id = "box2";
+			console.log(div2)
+			//添加在body中显示
+			document.body.appendChild(div2);
+			//动态创建b标签, 添加在div2中
+			var bElem = document.createElement('b');
+			//创建文本节点
+			var text = document.createTextNode('加粗标签');
+			bElem.appendChild(text);
+			div2.appendChild(bElem);
+			//在指定位置插入元素
+			var h1 = document.createElement('h1');
+			h1.innerText = "一级标题";
+			//将h1插入在div2之前
+			document.body.insertBefore(h1,div2);
+			//移除节点
+			document.body.removeChild(h1);
+		</script>
+	</body>
+</html>
