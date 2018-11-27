@@ -184,52 +184,111 @@ img{
 #main{
 	margin-top: 25px;
 }
-/*商品分类*/
-#main .goodsClass{
-	border-top: 1px solid #CCCCCC;
-	padding-top: 15px;
-	margin-bottom: 10px;
+/*4.1 标题栏*/
+#main div.title{
+	height: 32px;
+	background: #F3F3F3;
+	border: 1px solid #E9E9E9;
 }
-#main .goodsClass>a{
-	float: right;
-	color: #333333;
-}
-
-
-/*信息展示 列表项.item*/
-#main .item{
-/*共行显示5个li元素*/
+#main div.title>p{
 	float: left;
-	width: 190px;
-	margin-right: 10px;
-	margin-bottom: 5px;
+	line-height: 32px;
 }
-#main .item .imgInfo{
-	width: 190px;
-	height: 190px;
+#main .check-box{
+	width: 132px;
+}
+#main .goods{
+	width: 378px;
+}
+#main .price{
+	width: 160px;
+	text-align: center;
+}
+#main .count{
+	width: 80px;
+	text-align: center;
+}
+#main .t-sum{
+	width: 140px;
+	text-align: center;
+}
+#main .action{
+	width: 85px;
+	text-align: center;
+}
+
+/*设置复选框与文本的垂直对齐*/
+#checkall{
+	vertical-align: middle;
+}
+/*4.2 购物车内容*/
+#main div.good-content p{
+	float: left;
+}
+#main .g-item{
+	border-top: 2px solid #999999;
+	border-bottom: 1px solid #999999;
+	margin-top: 20px;
+	padding: 10px 0px;
 	overflow: hidden;
 }
-#main .item .imgInfo>img{
-	width: 190px;
-	transition: .3s;
+#main .g-item img{
+	width: 80px;
 }
-#main .item .imgInfo>img:hover{
-	/*放大图片*/
-	transform:scale(1.1);
+/*数量增减*/
+.count a{
+	float: left;
+	width: 16px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+	border: 1px solid #CACBCB;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.count input{
+	float: left;
+	width: 42px;
+	height: 18px;
+	text-align: center;
+	border-top: 1px solid #CACBCB;
+	border-bottom: 1px solid #CACBCB;
+	border-left: 0;
+	border-right: 0;
+	padding: 1px;
+	font-size: 12px;
+}
+/*5. 底部工具栏*/
+#cart-toolbar{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+}
+#cart-toolbar p{
+	float: left;
 }
 
-/*购物车图标 <a href=""><img></a> 让a标签整体右浮*/
-#main .item .content a{
-	float: right;
+#cart-toolbar span{
+	color: #E4393c;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 7px;
 }
-#main .content p{
-	margin: 15px 0 5px 8px;
+#cart-toolbar .submit-count{
+	margin: 0 20px;
 }
-#main .content span{
-	margin-left: 15px;
-	color: #333333;
+#cart-toolbar .submit-btn{
+	background: #E4393C;
+	width: 80px;
+	text-align: center;
+	color: white;
+	font-weight: 700;
+	font-size: 20px;
+	margin-left: 20px;
+	cursor:pointer;
 }
-/*每行最后一个li元素取消右侧外边距*/
-#main .lastItem{
-	margin-right: 0;
+.g-item [name="check"]{
+	vertical-align: top;
 }
